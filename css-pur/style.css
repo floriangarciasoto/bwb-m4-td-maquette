@@ -116,6 +116,11 @@ header button {
   margin: 0.5em;
 }
 
+header a {
+  color: white;
+  text-decoration: underline;
+}
+
 /* ---- Nav ---- */
 
 nav ul {
@@ -182,7 +187,7 @@ main {
 
 section {
   width: 45%;
-  height: 30em;
+  height: 25em;
 }
 
 #coords,
@@ -298,4 +303,26 @@ footer {
   padding: 1.5em;
   margin-top: 2em;
   box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/*---- Responsive ----*/
+
+@media screen and (min-width: 768px) {
+
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+
+
+}
+
+@media (hover: hover) {
+
+  a {
+    cursor: pointer;
+  }
+
 }
