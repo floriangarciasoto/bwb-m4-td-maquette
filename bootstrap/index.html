@@ -6,12 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maquette TD M4 Bootstrap</title>
 
-  <!-- Framework CSS -->
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -19,15 +20,51 @@
   <!-- ==========================
        En-tête du site
   ========================== -->
-  <header>
+  <header class="bg-primary text-white py-3 container-fluid">
+
+    <div class="row">
+
+      <div class="col-4 d-flex align-items-center">
+        <p>Mon compte</p>
+        <i class="bi bi-exclamation-triangle-fill me-2"></i>
+      </div>
+
+      <div class="col-4 d-flex justify-content-center align-items-center flex-grow-1">
+        <i class="bi bi-exclamation-triangle-fill me-2"></i>
+        <p>Derniers jours pour votre DNAS</p>
+      </div>
+
+      <div class="col-4">
+        <div class="d-flex justify-content-between">
+          <div class="d-flex align-items-center">
+            <i class="bi bi-envelope-fill me-2"></i>
+            <a href="https://mail.google.com/" target="_blank">Messagerie (2)</a>
+          </div>
+          <a href="logout/" class="btn">Déconnexion</a>
+        </div>
+        <div>
+          <p>Entreprise XXXXXX | N° Siret 00000000000000</p>
+        </div>
+      </div>
+
+    </div>
 
   </header>
+
 
   <!-- ==========================
        Menu de navigation
   ========================== -->
-  <nav>
-
+  <nav class="bg-light shadow-sm">
+    <ul class="nav justify-content-center">
+      <li class="nav-item"><a href="#" class="nav-link"><i class="bi bi-house-fill me-2"></i></a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Mes infos</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Mes autorisations d'accés</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Mes salariés</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Mes cotisation</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Mes contrats</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Mes opérations</a></li>
+    </ul>
   </nav>
 
   <!-- ==========================
@@ -35,12 +72,224 @@
   ========================== -->
   <main>
 
+    <div class="container my-5">
+      <div class="row g-4">
+
+        <h1 class="col-md-6">Bienvenue Entreprise XXXXXXXXXX</h1>
+        <p class="col-md-6">Dernière connexion : le 10/03/2014 à 14:08</p>
+
+        <!-- Card 1 -->
+        <div class="col-md-6">
+          <div class="card shadow rounded h-100">
+            <div class="card-body">
+
+              <h2 class="card-title d-flex align-items-center">
+                <i class="bi bi-pin me-2"></i> Coordonées
+              </h2>
+
+              <ul class="list-unstyled">
+                <li>
+                  <i class="bi bi-hash-fill me-2"></i>
+                  <strong>SIRET :</strong> 000000000000000000000
+                </li>
+                <li>
+                  <i class="bi bi-house-fill me-2"></i>
+                  <strong>Adresse :</strong> 298 boulevard Voltaire<br>75002 PARIS
+                </li>
+                <li>
+                  <i class="bi bi-telephone-fill me-2"></i>
+                  <strong>Téléphone :</strong> 02 02 02 02 02
+                </li>
+                <li>
+                  <i class="bi bi-envelope-fill me-2"></i>
+                  <strong>Adresse mail :</strong> xxxxxxxxxxxx.paris@gmail.com
+                </li>
+              </ul>
+
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 fictive remplacée par 3 cards -->
+        <div class="col-md-6">
+          <div class="row g-4">
+
+            <!-- Une card en haut -->
+            <div class="col-12">
+              <div class="card shadow rounded h-100">
+                <div class="card-body">
+
+                  <div class="d-flex flex-column align-items-center">
+                    <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                    <p>Urgent</p>
+                  </div>
+                  <p>Il ne vous reste que 3 jours pour remplir la déclaration nominative annuelle des salaires
+                    (DNAS). Pour
+                    faire
+                    votre déclaration, <a href="#">cliquez ici</a>.</p>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Deux cards en bas -->
+            <div class="col-6">
+              <div class="card shadow rounded h-100">
+                <div class="card-body">
+
+                  <a id="message-square" href="https://mail.google.com/" target="_blank"
+                    class="d-flex flex-column justify-content-between align-items-center box">
+                    <h3>Messagerie</h3>
+                    <i class="bi bi-envelope-fill me-2"></i>
+                    <p>Vous avez 2 messages non-lus</p>
+                  </a>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card shadow rounded h-100">
+                <div class="card-body">
+
+                  <h3>Contact PRO BTP</h3>
+
+                  <ul class="list-unstyled">
+                    <li>
+                      <i class="bi bi-person-fill me-2"></i>
+                      Votre conseiller : JEAN DUPONT
+                    </li>
+                    <li>
+                      <i class="bi bi-telephone-fill me-2"></i>
+                      04 04 04 04 04
+                    </li>
+                    <li>
+                      <i class="bi bi-envelope-fill me-2"></i>
+                      <a href="#">Envoyer un e-mail à mon conseiller</a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-6">
+          <div class="card shadow rounded h-100">
+            <div class="card-body">
+
+              <h2 class="card-title d-flex align-items-center">
+                <i class="bi bi-flag me-2"></i> Dernières opérations
+              </h2>
+
+              <table class="table table-striped table-bordered table-hover">
+                <thead class="table-primary">
+                  <tr>
+                    <td>Date</td>
+                    <td>Objet</td>
+                    <td>Numéro d'opération</td>
+                    <td>Auteur</td>
+                    <td>Etat</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>08/03/2014</td>
+                    <td>Mise à jour</td>
+                    <td>17</td>
+                    <td>Profil 2</td>
+                    <td class="draft">Brouillon</td>
+                  </tr>
+                  <tr>
+                    <td>28/02/2014</td>
+                    <td>Affiliation</td>
+                    <td>16</td>
+                    <td>Profil 1</td>
+                    <td class="draft">Brouillon</td>
+                  </tr>
+                  <tr>
+                    <td>27/02/2014</td>
+                    <td>Mise à jour</td>
+                    <td>15</td>
+                    <td>ADMIN</td>
+                    <td class="valid">Validé</td>
+                  </tr>
+                  <tr>
+                    <td>25/02/2014</td>
+                    <td>Mise à jour</td>
+                    <td>14</td>
+                    <td>Profil 1</td>
+                    <td class="valid">Validé</td>
+                  </tr>
+                  <tr>
+                    <td>10/02/2014</td>
+                    <td>DNAS</td>
+                    <td>13</td>
+                    <td>ADMIN</td>
+                    <td class="valid">Validé</td>
+                  </tr>
+                  <tr>
+                    <td>23/01/2014</td>
+                    <td>Arrêt de travail</td>
+                    <td>12</td>
+                    <td>Profil 2</td>
+                    <td class="valid">Validé</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-md-6">
+          <div class="card shadow rounded h-100">
+            <div class="card-body">
+
+              <h2 class="card-title d-flex align-items-center">
+                <i class="bi bi-exclamation-triangle-fill me-2"></i> Important
+              </h2>
+
+              <ul class="list-unstyled">
+                <li>
+                  <i class="bi bi-triangle me-2"></i>
+                  <strong>Nouveau :</strong> paiement des cotisations par chèque ou par prélèvement à
+                  l'échéance, c'est vous
+                  qui choisissez !
+                </li>
+                <li>
+                  <i class="bi bi-triangle me-2"></i>
+                  <strong>Arrêt de travail > 90 jours :</strong> ce qui change au 1er janvier 2014
+                </li>
+                <li>
+                  <i class="bi bi-triangle me-2"></i>
+                  <a href="signin/"><strong>Inscrivez-vous</strong></a> au télépaiement
+                </li>
+                <li>
+                  <i class="bi bi-triangle me-2"></i>
+                  <strong>Exonérations sociales et fiscales :</strong> <a href="">conformité des contrats
+                    prévoyance / frais
+                    de santé</a>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
   </main>
 
   <!-- ==========================
        Pied de page
   ========================== -->
-  <footer>
+  <footer class="p-6 bg-black">
 
   </footer>
 
