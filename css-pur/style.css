@@ -1,3 +1,49 @@
+/* -- Globals -- */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #1f67e3;
+}
+
+img {
+  width: 2em;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.btn {
+  display: block;
+  height: 1.25em;
+  background: #0076ff;
+  color: white;
+  border: none;
+  padding: 0.75em 1.5em;
+  font-size: 1em;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #0052b2;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 /* ---- Classes Flexbox ---- */
 
 .flx {
@@ -33,43 +79,109 @@
 .flx-ww {
   flex-wrap: wrap;
 }
-
-a {
-  text-decoration: none;
+.flx-g1 {
+  flex-grow: 1;
 }
 
-img {
-  width: 2em;
-  aspect-ratio: 1;
-  object-fit: cover;
+/* -- Elements -- */
+
+/* ---- Header ---- */
+
+header {
+  padding: 1em;
+  background: linear-gradient(135deg, #1f67e3, #4da1ff);
+  color: white;
+  padding: 1.5em;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
+
+header > :is(:first-child, :last-child) {
+  width: 25%;
+}
+
+header p {
+  display: inline;
+}
+
+header img {
+  margin: 0.5em;
+}
+
+header > :last-child > :first-child {
+  margin-bottom: 0.5em;
+}
+
+header button {
+  margin: 0.5em;
+}
+
+/* ---- Nav ---- */
 
 nav ul {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0.5em;
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav ul li {
-  border: 1px solid black;
+  display: block;
+  flex-grow: 1;
+}
+
+nav ul li:first-child a {
+  display: block;
 }
 
 nav a {
-  color: black;
+  text-decoration: none;
+  color: #1f67e3;
+  padding: 0.5em 0.75em;
+  border-radius: 8px;
+  transition: 0.3s;
 }
 
-main > * {
-  width: 45%;
+nav li:not(:first-child) a:hover {
+  background: #1f67e3;
+  color: white;
 }
 
-main > h1,
-main > p {
-  width: 45%;
+/* ---- Main ---- */
+
+main {
+  margin: 0 2em;
 }
+
+.icon-title {
+  background: url("https://www.svgrepo.com/show/510014/image.svg") no-repeat
+    left center;
+  background-size: 1.5em;
+  padding-left: 1.75em;
+  line-height: 1.5;
+  margin-top: 0;
+}
+
+.box {
+  background: white;
+  padding: 1.25em;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#site-title-dv * {
+  width: 50%;
+  text-align: center;
+}
+
+/* ------ Spacing ------ */
 
 section {
+  width: 45%;
   height: 30em;
 }
 
@@ -80,30 +192,110 @@ section {
   margin: 1em;
 }
 
-#coords,
-#operations,
-#important,
-#messages,
-#messages article {
-  border: 1.5px solid black;
-  border-radius: 15px;
-  padding: 0.5em;
-}
-
 #messages {
   border-color: transparent;
+  width: calc(45% + 1.25em * 2);
 }
 
 #message-urgent {
   margin-bottom: 2em;
-  flex-grow: 1;
+}
+
+#message-urgent > div {
+  margin: 0.5em;
+}
+
+#message-urgent > p {
+  margin-left: 1.5em;
 }
 
 #message-square {
   aspect-ratio: 1;
 }
 
+#message-square h3,
+#message-contact h3 {
+  text-align: center;
+}
+
 #message-contact {
   margin-left: 2em;
-  flex-grow: 1;
+}
+
+/* ------ List ------ */
+
+.list-with-images {
+  list-style: none;
+  padding: 0 0 0 1em;
+  margin: 0;
+}
+
+.list-with-images li {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  margin-bottom: 0.5em;
+}
+
+.list-with-images li img {
+  width: 2em;
+  height: 2em;
+}
+
+.list-with-triangles {
+  list-style: none;
+  padding: 0;
+}
+
+.list-with-triangles li {
+  position: relative;
+  padding-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+.list-with-triangles li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-bottom: 6px solid transparent;
+  border-top: 6px solid transparent;
+  border-left: 10px solid black;
+}
+
+/* ------ Table ------ */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 0.75em;
+  text-align: left;
+}
+
+thead {
+  background: #1f67e3;
+  color: white;
+}
+
+tbody tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+/* ---- Footer ---- */
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1.5em;
+  margin-top: 2em;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
 }
