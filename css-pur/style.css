@@ -1,0 +1,109 @@
+/* ---- Classes Flexbox ---- */
+
+.flx {
+  display: flex;
+}
+.flx-jc {
+  justify-content: center;
+}
+.flx-js {
+  justify-content: flex-start;
+}
+.flx-je {
+  justify-content: flex-end;
+}
+.flx-jb {
+  justify-content: space-between;
+}
+.flx-ja {
+  justify-content: space-around;
+}
+.flx-ac {
+  align-items: center;
+}
+.flx-as {
+  align-items: flex-start;
+}
+.flx-ae {
+  align-items: flex-end;
+}
+.flx-dc {
+  flex-direction: column;
+}
+.flx-ww {
+  flex-wrap: wrap;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 2em;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  border: 1px solid black;
+}
+
+nav a {
+  color: black;
+}
+
+main > * {
+  width: 45%;
+}
+
+main > h1,
+main > p {
+  width: 45%;
+}
+
+section {
+  height: 30em;
+}
+
+#coords,
+#operations,
+#important,
+#messages {
+  margin: 1em;
+}
+
+#coords,
+#operations,
+#important,
+#messages,
+#messages article {
+  border: 1.5px solid black;
+  border-radius: 15px;
+  padding: 0.5em;
+}
+
+#messages {
+  border-color: transparent;
+}
+
+#message-urgent {
+  margin-bottom: 2em;
+  flex-grow: 1;
+}
+
+#message-square {
+  aspect-ratio: 1;
+}
+
+#message-contact {
+  margin-left: 2em;
+  flex-grow: 1;
+}
