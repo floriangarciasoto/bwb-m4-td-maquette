@@ -359,6 +359,54 @@ td.td-with-icon {padding-right: 3em;}
 td.wip {background: url("images/black/flower-105-svgrepo-com.svg") no-repeat 90% center / 1.5em auto;}
 td.checked {background: url("images/black/check-box-svgrepo-com.svg") no-repeat 90% center / 1.5em auto;}
 
+/* ---- Formulaires ---- */
+
+.form-container {
+  margin-top: 2em;
+  background: #fff;
+  padding: 2em;
+  border-radius: 0.5em;
+  box-shadow: 0 0.25em 0.625em rgba(0,0,0,0.1);
+  width: 30em;
+}
+
+.form-container h1 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.form-container label {
+  display: block;
+}
+
+.form-container form > div {
+  width: 85%;
+}
+
+.form-container input {
+  width: 85%;
+  padding: 0.8em;
+  margin: 0.6em 0;
+  border: 1px solid #ccc;
+  border-radius: 0.3em;
+}
+
+.form-container button {
+  width: 95%;
+  padding: 0.8em;
+  margin: 0.6em 0;
+  background: #1F67E3;
+  color: #fff;
+  border: none;
+  border-radius: 0.3em;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background: #1450b3;
+}
+
+.form-container form input {width: calc(100% - 0.8em * 2);}
 
 /* ---- Footer ---- */
 
@@ -418,9 +466,13 @@ footer {
     display: block;
   }
 
+  .form-container {width: 90%;}
+
 }
 
 @media (hover: hover) {
+
+  form button {transition-duration: 0.4s;}
 
   a {
     cursor: pointer;
