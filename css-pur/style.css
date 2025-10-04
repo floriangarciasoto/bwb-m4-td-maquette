@@ -265,6 +265,11 @@ section {
 #message-square {
   aspect-ratio: 1;
   height: calc(100% - 1.25em * 2);
+  color: black;
+}
+
+#message-square img {
+  width: 7.5em;
 }
 
 #message-square h3,
