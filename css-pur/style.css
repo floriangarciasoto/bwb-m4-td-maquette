@@ -18,6 +18,18 @@ img {
   object-fit: cover;
 }
 
+.icon-small {
+  width: 1.5em;
+}
+
+.icon-medium {
+  width: 2.5em;
+}
+
+.icon-large {
+  width: 5em;
+}
+
 .btn {
   display: block;
   height: 1.25em;
@@ -118,6 +130,9 @@ header button {
 
 header a {
   color: white;
+}
+
+#header-messages-ref {
   text-decoration: underline;
 }
 
@@ -163,13 +178,14 @@ main {
 }
 
 .icon-title {
-  background: url("https://www.svgrepo.com/show/510014/image.svg") no-repeat
-    left center;
-  background-size: 1.5em;
   padding-left: 1.75em;
   line-height: 1.5;
   margin-top: 0;
 }
+
+#coords h2 {background: url("images/black/pin-svgrepo-com.svg") no-repeat left center / 1.5em auto;}
+#operations h2 {background: url("images/black/flag-svgrepo-com.svg") no-repeat left center / 1.5em auto;}
+#important h2 {background: url("images/black/thunder-2-svgrepo-com.svg") no-repeat left center / 1.5em auto;}
 
 .box {
   background: white;
@@ -190,11 +206,10 @@ section {
   height: 25em;
 }
 
-#coords,
-#operations,
-#important,
-#messages {
-  margin: 1em;
+#sections-dv,
+#messages,
+#messages > div {
+  gap: 1.25em;
 }
 
 #messages {
@@ -203,11 +218,11 @@ section {
 }
 
 #message-urgent {
-  margin-bottom: 2em;
+  /* margin-bottom: 2em; */
 }
 
 #message-urgent > div {
-  margin: 0.5em;
+  /* margin: 0.5em; */
 }
 
 #message-urgent > p {
@@ -216,6 +231,7 @@ section {
 
 #message-square {
   aspect-ratio: 1;
+  height: calc(100% - 1.25em * 2);
 }
 
 #message-square h3,
@@ -224,7 +240,7 @@ section {
 }
 
 #message-contact {
-  margin-left: 2em;
+  /* margin-left: 2em; */
 }
 
 /* ------ List ------ */
@@ -240,6 +256,10 @@ section {
   align-items: center;
   gap: 0.75em;
   margin-bottom: 0.5em;
+}
+
+.list-with-images-less-margin {
+  margin-bottom: 0.25em;
 }
 
 .list-with-images li img {
