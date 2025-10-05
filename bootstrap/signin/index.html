@@ -17,7 +17,109 @@
 
 <body>
 
-  
+  <!-- ==========================
+       En-tête du site
+  ========================== -->
+  <header class="bg-primary text-white py-1 container-fluid">
+
+    <div class="row">
+
+      <div class="col-md-4 d-flex align-items-center my-2 justify-content-center">
+        <p class="m-0 me-2">Mon compte</p>
+        <i class="bi bi-lock-fill"></i>
+      </div>
+
+      <div class="col-md-4 d-flex justify-content-center align-items-center fs-5 my-2">
+        <i class="bi bi-exclamation-triangle-fill me-3 fs-3"></i>
+        <p class="m-0">Derniers jours pour votre DNAS</p>
+      </div>
+
+      <div class="col-md-3 offset-md-1 my-2">
+        <div class="d-flex justify-content-around mb-2">
+          <div class="d-flex align-items-center">
+            <i class="bi bi-envelope-fill me-2"></i>
+            <a href="ms-outlook:" class="text-white">Messagerie (2)</a>
+          </div>
+          <a href="login/" class="btn bg-white text-black shadow">Connexion</a>
+        </div>
+        <div>
+          <p class="text-center">Entreprise XXXXXX | N° Siret 00000000000000</p>
+        </div>
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- ==========================
+       Menu de navigation
+  ========================== -->
+  <nav class="bg-light shadow-sm position-sticky top-0 z-1">
+    <ul class="nav justify-content-between justify-content-lg-center fs-5">
+      <li class="nav-item"><a href="../" class="nav-link"><i class="bi bi-house-fill"></i></a></li>
+      <li class="nav-item d-none d-lg-block"><a href="#" class="nav-link">Mes infos</a></li>
+      <li class="nav-item d-none d-lg-block"><a href="#" class="nav-link">Mes autorisations d'accés</a></li>
+      <li class="nav-item d-none d-lg-block"><a href="#" class="nav-link">Mes salariés</a></li>
+      <li class="nav-item d-none d-lg-block"><a href="#" class="nav-link">Mes cotisation</a></li>
+      <li class="nav-item d-none d-lg-block"><a href="#" class="nav-link">Mes contrats</a></li>
+      <li class="nav-item d-none d-lg-block"><a href="#" class="nav-link">Mes opérations</a></li>
+      <li class="nav-item d-lg-none"><a href="#" class="nav-link"><i class="bi bi-justify"></i></a></li>
+    </ul>
+  </nav>
+
+  <main class="container d-flex justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6 my-4">
+      <h1 class="text-center mb-4">Inscription au télépaiement</h1>
+      <form>
+        <div class="mb-3">
+          <label for="nom" class="form-label">Nom</label>
+          <input type="text" class="form-control" id="nom" name="nom" placeholder="Sylvain" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="prenom" class="form-label">Prénom</label>
+          <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Durif" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="capitaine@haddock.fr" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="contrat" class="form-label">Numéro de contrat</label>
+          <input type="text" class="form-control" id="contrat" name="contrat" placeholder="XXXX-XXX-XXX-XXX" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="rib" class="form-label">RIB</label>
+          <input type="text" class="form-control" id="rib" name="rib" placeholder="FR-12-1234-5678-9123-4567-8912-3-45" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="mdp" class="form-label">Mot de passe</label>
+          <input type="password" class="form-control" id="mdp" name="mot_de_passe" placeholder="Un mot de passe ..." required>
+        </div>
+
+        <div class="mb-3">
+          <label for="mdp2" class="form-label">Confirmer le mot de passe</label>
+          <input type="password" class="form-control" id="mdp2" name="confirmation_mot_de_passe" placeholder="Par Sith ..." required>
+        </div>
+
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary">S’inscrire</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- ==========================
+       Pied de page
+  ========================== -->
+  <footer class="p-5 bg-black">
+
+  </footer>
 
 </body>
 
